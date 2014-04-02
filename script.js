@@ -19,12 +19,5 @@ $('img#coin').click(function() {
 });
 
 function loadCoin(url) {
-	jQuery.getJSON(url, function(data) {
-		// data is an array of objects
-		$.each(data, function(){
-			console.log(this.title); // log each title
-		});
-
-		return data;
-	});
+	return $.getJSON(url);
 }
