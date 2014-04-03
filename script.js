@@ -11,8 +11,18 @@ $('img#coin').click(function() {
 });
 
 function loadCoin(url) {
-	return $.getJSON(url, function(response){
-		JSON = response;
-		alert(JSON.property);
+	$.ajax({
+		url: url,
+		dataType: "text",
+		success: function(data) {
+			
+			//data downloaded so we call parseJSON function 
+			//and pass downloaded data
+			var json = $.parseJSON(data);
+			//now json variable contains data in json format
+			//let's display a few items
+			alert('Plugin name: ' + json.name + '<br />Author: ' + json.author.name);
+			return json;
+		}
 	});
 }
