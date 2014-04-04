@@ -13,15 +13,17 @@ $('img#coin').click(function() {
 });
 
 function loadCoin(path) {
-	var fileText = $.ajax({
-		url: path,
-		dataType: 'json',
-		statusCode: {
-			404: function() {
-				alert("Coin at url\"" + path + "\" not found");
+	var json = (function () {
+		var json = null;
+		$.ajax({
+			'async': false,
+			'global': false,
+			'url': path,
+			'dataType': "json",
+			'success': function (data) {
+				json = data;
 			}
-		}
-	});
-	
-	return fileText;
+		});
+		return json;
+	})(); 
 }
