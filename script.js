@@ -14,8 +14,7 @@ function loadCoin(path) {
 	$.ajax({
 		url: path,
 		success: function (data) {
-			var obj = JSON.parse(data);
-			return obj;
+			return JSON.parse(data);
 		}
 	});
 }
