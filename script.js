@@ -29,3 +29,10 @@ function loadCoin(path) {
 
 	return json;
 }
+
+fuction changeCoin(newCoin) {
+	coin = newCoin;
+	
+	$('img#coin').width(newCoin.size * 10);
+	$('img#coin').height(newCoin.size * 10);
+}
