@@ -15,7 +15,7 @@ $('img#coin').click(function() {
 function loadCoin(path) {
 	var fileText = $.ajax({
 		url: path,
-		dataType: 'text',
+		dataType: 'json',
 		statusCode: {
 			404: function() {
 				alert("Coin at url\"" + path + "\" not found");
@@ -23,5 +23,5 @@ function loadCoin(path) {
 		}
 	});
 	
-	return JSON.parse(fileText.replace("/(\s)+/g", ""));
+	return fileText;
 }
