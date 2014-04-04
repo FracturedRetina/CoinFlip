@@ -13,11 +13,14 @@ $('img#coin').click(function() {
 });
 
 function loadCoin(path) {
-	return $.ajax({
+	var fileText = $.ajax({
 		url: path,
-		dataType: 'json',
-		success: function (data) {
-			console.log("Data: " + data);
+		dataType: 'text'
+		statusCode: {
+			404: function() {
+			alert("Coin at url\"" + path + "\" not found");
 		}
 	});
+	
+	return JSON.parse(fileText.replace("/(\s)+/g", ""));
 }
