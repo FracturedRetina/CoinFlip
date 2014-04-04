@@ -16,4 +16,6 @@ function loadCoin(url) {
 			console.log(url.Display);
 		}
 	);
+	
+	return json;
 }
