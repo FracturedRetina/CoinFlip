@@ -10,9 +10,9 @@ $('img#coin').click(function() {
 	}
 });
 
-function loadCoin(url) {
+function loadCoin(path) {
 	$.ajax({
-		url: url,
+		url: path,
 		success: function (data) {
 			var obj = JSON.parse(data);
 			return obj;
