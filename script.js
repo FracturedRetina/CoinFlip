@@ -18,7 +18,8 @@ function loadCoin(path) {
 		dataType: 'text',
 		statusCode: {
 			404: function() {
-			alert("Coin at url\"" + path + "\" not found");
+				alert("Coin at url\"" + path + "\" not found");
+			}
 		}
 	});
 	
