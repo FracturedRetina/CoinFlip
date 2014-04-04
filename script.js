@@ -11,8 +11,17 @@ $('img#coin').click(function() {
 });
 
 function loadCoin(url) {
-	return $.getJSON(url, function(response){
-		JSON = response;
-		alert(JSON.property);
-	});
+	var json = (function () {
+		var json = null;
+		$.ajax({
+			'async': false,
+			'global': false,
+			'url': my_url,
+			'dataType': "json",
+			'success': function (data) {
+				json = data;
+			}
+		});
+		return json;
+	})(); 
 }
