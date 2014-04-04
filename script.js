@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var coin = loadCoin("/res/us/quarter.json");
+	var coin = loadCoin("res/us/quarter.json");
 });
 
 $('img#coin').click(function() {
