@@ -11,11 +11,11 @@ $('img#coin').click(function() {
 });
 
 function loadCoin(url) {
-	var json = $.parseJSON(url,
-		function(data) {
-			console.log(url.Display);
+	$.ajax({
+		url: url,
+		success: function (data) {
+			var obj = JSON.parse(data);
+			return obj;
 		}
-	);
-	
-	return json;
+	});
 }
