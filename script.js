@@ -15,7 +15,7 @@ function loadCoin(path) {
 		url: path,
 		dataType: 'json',
 		success: function (data) {
-			return JSON.parse(data);
+			return data;
 		}
 	});
 }
