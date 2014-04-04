@@ -25,5 +25,7 @@ function loadCoin(path) {
 			}
 		});
 		return json;
-	})(); 
+	})();
+	
+	return json;
 }
