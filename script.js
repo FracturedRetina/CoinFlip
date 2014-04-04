@@ -13,11 +13,11 @@ $('img#coin').click(function() {
 });
 
 function loadCoin(path) {
-	$.ajax({
+	return $.ajax({
 		url: path,
 		dataType: 'json',
 		success: function (data) {
-			return data;
+			console.log("Data: " + data);
 		}
 	});
 }
