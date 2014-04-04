@@ -13,6 +13,7 @@ $('img#coin').click(function() {
 function loadCoin(path) {
 	$.ajax({
 		url: path,
+		dataType: 'json',
 		success: function (data) {
 			return JSON.parse(data);
 		}
