@@ -1,6 +1,8 @@
 CoinFlip
 ========
 
+**If you have any requests for coinpacks or feature additions, open an issue! I'm happy to expand the project.**
+
 All probabilities are based on javascript's `Math.random()` function.
 All coins images are from Wikimedia.
 
