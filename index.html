@@ -6,6 +6,10 @@
 				width: 250px;
 				height: 250px;
 			}
+			select#chooseCoin {
+				width: 90px;
+				height: 18px;
+			}
 			.centered {
 				position: absolute;
 				top: 0;
@@ -22,14 +26,12 @@
 		<script type="text/javascript" src="script.js"></script>
 	</head>
 	<body>
-		<div id="content" class="centered">
-			<img id="coin" src="http://upload.wikimedia.org/wikipedia/commons/a/a0/Circle_-_black_simple.svg" />
-			<select id="chooseCoin">
-				<option value="us/quarter">	US Quarter	</option>
-				<option value="us/dime">	US Dime		</option>
-				<option value="us/nickel">	US Nickel	</option>
-				<option value="us/penny">	US Penny	</option>
-			</select>
-		</div>
+		<img id="coin" class="centered" src="http://upload.wikimedia.org/wikipedia/commons/a/a0/Circle_-_black_simple.svg" />
+		<select id="chooseCoin" class="centered">
+			<option value="us/quarter">	US Quarter	</option>
+			<option value="us/dime">	US Dime		</option>
+			<option value="us/nickel">	US Nickel	</option>
+			<option value="us/penny">	US Penny	</option>
+		</select>
 	</body>
 </html>
