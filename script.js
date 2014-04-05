@@ -1,7 +1,7 @@
 var coin;
 
 $(document).ready(function() {
-	coin = loadCoin("res/us/quarter.json");
+	changeCoin(loadCoin("res/us/quarter.json"));
 
 	$('img#coin').click(function() {
 		if (Math.random() < 0.5) {
@@ -32,7 +32,8 @@ function loadCoin(path) {
 
 function changeCoin(newCoin) {
 	coin = newCoin;
-
+	
+	$('img#coin').attr('src', "http://upload.wikimedia.org/wikipedia/commons/a/a0/Circle_-_black_simple.svg");
 	$('img#coin').width(newCoin.size * 10);
 	$('img#coin').height(newCoin.size * 10);
 }
