@@ -10,7 +10,13 @@ $(document).ready(function() {
 			$(this).attr('src', coin.tailSrc);
 		}
 	});
-	$('select#chooseCoin').change(changeCoin(loadCoin("res/" + $(this).val() + ".json"));
+	$('select#chooseCoin').change(
+		function() {
+			changeCoin(
+				loadCoin("res/" + $(this).val() + ".json")
+			)
+		}
+	);
 });
 
 function loadCoin(path) {
