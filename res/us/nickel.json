@@ -2,5 +2,6 @@
 	"headSrc":"http://upload.wikimedia.org/wikipedia/commons/7/72/Jefferson-Nickel-Unc-Obv.jpg",
 	"tailSrc":"http://upload.wikimedia.org/wikipedia/commons/2/23/US_Nickel_Reverse.jpg",
 	"country":"United States",
-	"size":21.21
+	"size":21.21,
+	"inCirculation":true
 }
