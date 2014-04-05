@@ -1,14 +1,18 @@
 var coin;
+var flipSound;
 
 $(document).ready(function() {
 	changeCoin(loadCoin("res/us/quarter.json"));
-
+	flipSound = new Audio("http://www.soundjay.com/misc/sounds/spinning-coin-1.mp3");
+	
 	$('img#coin').click(function() {
 		if (Math.random() < 0.5) {
 			$(this).attr('src', coin.headSrc);
 		} else {
 			$(this).attr('src', coin.tailSrc);
 		}
+		
+		flipSound.play();
 	});
 	$('select#chooseCoin').change(
 		function() {
