@@ -8,15 +8,19 @@ $(document).ready(function() {
 	);
 	flipSound = new Audio("http://www.soundjay.com/misc/sounds/spinning-coin-1.mp3");
 	
+	//Clicking on coin flips coin
 	$('img#coin').click(function() {
+		//Choose wether to show heads or tails
 		if (Math.random() < 0.5) {
 			$(this).attr('src', coin.headSrc);
 		} else {
 			$(this).attr('src', coin.tailSrc);
 		}
 		
+		//Play coin flip sound
 		flipSound.play();
 	});
+	//On new coin select
 	$('select#chooseCoin').change(
 		function() {
 			changeCoin(
@@ -26,6 +30,7 @@ $(document).ready(function() {
 	);
 });
 
+//Load a coin json file from url "path"
 function loadCoin(path) {
 	var json = (function () {
 		var json = null;
@@ -44,6 +49,8 @@ function loadCoin(path) {
 	return json;
 }
 
+//Change coin to a new loaded coin
+//This will also adjust the coin size and reset the coin source
 function changeCoin(newCoin) {
 	coin = newCoin;
 	
