@@ -20,6 +20,7 @@ $(document).ready(function() {
 		//Play coin flip sound
 		flipSound.play();
 	});
+	
 	//On new coin select
 	$('select#chooseCoin').change(
 		function() {
