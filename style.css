@@ -6,6 +6,7 @@ select#chooseCoin {
 	width: 117px;
 	height: 18px;
 }
+/*Will only center horizontally and vertically if width and hiehgt are defined*/
 .centered {
 	position: absolute;
 	top: 0;
