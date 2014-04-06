@@ -2,7 +2,10 @@ var coin;
 var flipSound;
 
 $(document).ready(function() {
-	changeCoin(loadCoin("res/us/quarter.json"));
+	//Initialize coin
+	changeCoin(
+		loadCoin("res/us/quarter.json")
+	);
 	flipSound = new Audio("http://www.soundjay.com/misc/sounds/spinning-coin-1.mp3");
 	
 	$('img#coin').click(function() {
@@ -44,7 +47,9 @@ function loadCoin(path) {
 function changeCoin(newCoin) {
 	coin = newCoin;
 	
+	//Set coin image to blank
 	$('img#coin').attr('src', "http://upload.wikimedia.org/wikipedia/commons/a/a0/Circle_-_black_simple.svg");
+	//Fix relative coin size
 	$('img#coin').width(newCoin.size * 10);
 	$('img#coin').height(newCoin.size * 10);
 }
