@@ -60,7 +60,7 @@ function changeCoin(newCoin) {
 	//Fix relative coin size
 	$('img#coin').width(newCoin.size * 10);
 	$('img#coin').height(newCoin.size * 10);
-	$('map#hitbox').attr('coords',
+	$('area').attr('coords',
 		(newCoin.size * 5) + ', ' +
 		(newCoin.size * 5) + ', ' +
 		(newCoin.size * 5)
