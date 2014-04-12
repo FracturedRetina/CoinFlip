@@ -9,12 +9,12 @@ $(document).ready(function() {
 	flipSound = new Audio("http://www.soundjay.com/misc/sounds/spinning-coin-1.mp3");
 	
 	//Clicking on coin flips coin
-	$('img#coin').click(function() {
+	$('map#hitbox').click(function() {
 		//Choose wether to show heads or tails
 		if (Math.random() < 0.5) {
-			$(this).attr('src', coin.headSrc);
+			$('img#coin').attr('src', coin.headSrc);
 		} else {
-			$(this).attr('src', coin.tailSrc);
+			$('img#coin').attr('src', coin.tailSrc);
 		}
 		
 		//Play coin flip sound
@@ -60,4 +60,9 @@ function changeCoin(newCoin) {
 	//Fix relative coin size
 	$('img#coin').width(newCoin.size * 10);
 	$('img#coin').height(newCoin.size * 10);
+	$('map#hitbox').attr('coords',
+		(newCoin.size * 5) + ', ' +
+		(newCoin.size * 5) + ', ' +
+		(newCoin.size * 5)
+	);
 }

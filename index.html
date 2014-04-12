@@ -40,7 +40,10 @@
 		<script type="text/javascript" src="script.js"></script>
 	</head>
 	<body>
-		<img id="coin" class="centered" src="http://upload.wikimedia.org/wikipedia/commons/a/a0/Circle_-_black_simple.svg" />
+		<map id="hitbox" name="hitbox" class="centered" coords="125, 125, 125">
+			<area shape="circle" />
+		</map>
+		<img id="coin" class="centered" src="http://upload.wikimedia.org/wikipedia/commons/a/a0/Circle_-_black_simple.svg" usemap="hitbox"/>
 		<select id="chooseCoin" class="centered">
 			<optgroup label="United States">
 				<option value="us/quarter">		Quarter		</option>
