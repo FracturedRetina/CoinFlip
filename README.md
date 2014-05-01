@@ -8,4 +8,4 @@ All coins images are from Wikimedia.
 
 Legal
 -----
-I have no ownership over the images of the coins or sound effects. They are either in the public domain or are the proerties of their owners. The coin flip sound is from [soundjay.com](http://soundjay.com/). The license for this code can be found [here](LICENSE.md).
+I have no ownership over the images of the coins or sound effects. They are either in the public domain or are the proerties of their owners. The coin flip sound is from [soundjay.com](http://soundjay.com/). The license for this code can be found [here](LICENSE).
